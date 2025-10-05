@@ -1,0 +1,407 @@
+ /* make the whole thing a grid, move them wiht flow, each content with flex: column OR row */
+ 
+ body
+ {
+    background-color: black;
+    font-size : 22px;
+ }
+
+ *
+ {
+    font-family: "Poppins", "Arial", sans-serif;
+   
+ }
+   /* Grid container that wraps up the whole page */
+  .grid-container
+  {
+      display: grid;
+      grid-template-columns: 1fr; /* single column layout */
+      grid-template-rows: auto 1fr auto; /* header, main content, footer */
+     min-height: 100vh; /* full viewport height */
+  }
+
+ 
+ 
+ header
+ {
+    color: white;
+    display: flex;
+    justify-content: space-between; /* pushes items to the edges */
+    align-items: center;  /* vertically centers items */
+    margin: 10px; /* adds some space around the header */
+    padding: 10px; /* adds some space inside the header */
+ }
+ 
+nav {
+    
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;            /* keeps items in a row */
+  justify-content: center;  /* centers them horizontally */
+  gap: 2rem;                /* spacing between links */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+   a:hover {
+  color: #91979b;    /* hover effect for clickable links*/
+}
+
+.nav-logo
+{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* makes the image circular */
+    object-fit: cover; /* ensures the image covers the entire area */
+    border: white 2px solid; /* adds a white border */
+}
+
+.profile 
+{
+    display: flex;
+    flex-direction: column; /* stacks items vertically */
+    align-items: flex-start; /* aligns items to the start (left) */
+    margin-left: 20px; /* adds some space from the left edge */
+}
+.profile h2
+{
+    margin-bottom: 2px; /* removes default margin */
+    font-size: 24px; 
+}
+#function
+{
+    color: #999999
+    
+}
+
+.horizontal-line
+{
+    border: none;
+    border-top: 1px solid  rgba(180,180,180,0.2);
+    margin: 40px 60px 0 60px
+    
+}
+.main-section
+{
+    display : flex;
+    align-items: flex-start; /* aligns items to the start (left) */
+    margin-top: 40px;
+    margin-left: 60px;
+    font-size: 30px;
+}
+
+.vertical-line
+{
+    border-left: 2px solid  rgba(180,180,180,0.2); /* vertical line */
+    height: 300px; 
+    margin: 0 20px; /* adds some space around the line */
+}
+
+.content {
+    color: white;
+    font-size: 19px;
+    
+
+}
+
+.section 
+{
+   display: flex;
+   justify-content: flex-end;
+
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* space between projects */
+  color: white;
+}
+
+.projects h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.project p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 0;
+}
+
+.project ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.project li {
+  margin-bottom: 0.4rem;
+}
+
+ .projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 6px;
+  border: 1px solid #444;
+}
+
+.contact
+{
+    
+   color: white;
+   margin-left: 20px;
+   padding: 20px;
+   font-size: 14px;
+ 
+}
+
+footer
+{
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+}
+
+ a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  color: white;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: #000;
+  margin-left: 2rem;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar .title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #aaa;
+}
+
+.sidebar .contact p {
+  margin: 0.5rem 0;
+  
+}
+
+.sidebar a {
+  color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #91979b;
+}
+
+.about {
+  flex: 1;
+  padding: 3rem;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  float: right;
+  margin: 0 0 1rem 1rem;
+}
+
+.cv-content {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.cv-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+.job, .edu-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.job-header, .edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.job-header h3, .edu-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.job-header span, .edu-header span {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+ul li {
+  margin-bottom: 0.4rem;
+}
+.profile h2 a:hover,
+.sidebar h2 a:hover {
+    color: #91979b;
+}
+
+
+
+@media screen and (max-width: 1024px)
+{
+
+    body 
+    {
+       padding: 0 20px;
+    }
+    header 
+    {
+    flex-direction: column;
+    align-items: flex-start;
+    }
+
+    nav li 
+    {
+        flex-direction: row;
+
+    }
+    .main-section,
+    .section 
+    {
+        flex-direction: column;
+        margin-left: 20px; /* reduces left margin for smaller screens */
+        align-items: center;
+    }
+    .content
+    {
+        margin: 20px 0; /* adds vertical spacing between sections to be more readable on smaller screens*/
+    }
+     .profile
+     {
+         align-items: center;
+        text-align: center;
+        margin: 0 auto; /* centers the profile section */
+     }
+    .nav-logo
+    {
+        margin-top: 10px;
+        margin: 0 auto; /* centers the logo */
+
+    }
+    .vertical-line
+    {
+        display: none; /* hides vertical line on smaller screens */
+
+    }
+}
+
+    @media screen and (max-width: 768px) 
+    {
+    body {
+        padding: 0 15px;
+    }
+
+    .scroll-box {
+        margin: 0 auto; /* centers scroll box */
+    }
+
+    .contact-item {
+        margin-bottom: 10px; /* adds spacing between contact lines */
+    }
+
+    .vertical-line {
+        display: none; /* hides vertical line on small screens */
+    }
+}
+
+ @media screen and (max-width: 375px) 
+    {
+    body {
+        padding: 0 15px;
+    }
+
+    .scroll-box {
+        margin: 0 auto; /* centers scroll box */
+    }
+
+    .contact-item {
+        margin-bottom: 10px; /* adds spacing between contact lines */
+    }
+
+    .vertical-line {
+        display: none; /* hides vertical line on small screens */
+    }
+}
+    
+ 
+
+
+
