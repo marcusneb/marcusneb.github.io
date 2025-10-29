@@ -1,407 +1,247 @@
- /* make the whole thing a grid, move them wiht flow, each content with flex: column OR row */
- 
- body
- {
-    background-color: black;
-    font-size : 22px;
- }
+/* ===== GENERAL STYLES ===== */
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.6;
+}
 
- *
- {
-    font-family: "Poppins", "Arial", sans-serif;
-   
- }
-   /* Grid container that wraps up the whole page */
-  .grid-container
-  {
-      display: grid;
-      grid-template-columns: 1fr; /* single column layout */
-      grid-template-rows: auto 1fr auto; /* header, main content, footer */
-     min-height: 100vh; /* full viewport height */
-  }
-
- 
- 
- header
- {
+a {
     color: white;
-    display: flex;
-    justify-content: space-between; /* pushes items to the edges */
-    align-items: center;  /* vertically centers items */
-    margin: 10px; /* adds some space around the header */
-    padding: 10px; /* adds some space inside the header */
- }
- 
-nav {
-    
-  padding: 1rem;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;            /* keeps items in a row */
-  justify-content: center;  /* centers them horizontally */
-  gap: 2rem;                /* spacing between links */
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-   a:hover {
-  color: #91979b;    /* hover effect for clickable links*/
-}
-
-.nav-logo
-{
-    display: block;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; /* makes the image circular */
-    object-fit: cover; /* ensures the image covers the entire area */
-    border: white 2px solid; /* adds a white border */
-}
-
-.profile 
-{
-    display: flex;
-    flex-direction: column; /* stacks items vertically */
-    align-items: flex-start; /* aligns items to the start (left) */
-    margin-left: 20px; /* adds some space from the left edge */
-}
-.profile h2
-{
-    margin-bottom: 2px; /* removes default margin */
-    font-size: 24px; 
-}
-#function
-{
-    color: #999999
-    
-}
-
-.horizontal-line
-{
-    border: none;
-    border-top: 1px solid  rgba(180,180,180,0.2);
-    margin: 40px 60px 0 60px
-    
-}
-.main-section
-{
-    display : flex;
-    align-items: flex-start; /* aligns items to the start (left) */
-    margin-top: 40px;
-    margin-left: 60px;
-    font-size: 30px;
-}
-
-.vertical-line
-{
-    border-left: 2px solid  rgba(180,180,180,0.2); /* vertical line */
-    height: 300px; 
-    margin: 0 20px; /* adds some space around the line */
-}
-
-.content {
-    color: white;
-    font-size: 19px;
-    
-
-}
-
-.section 
-{
-   display: flex;
-   justify-content: flex-end;
-
-}
-
-.projects {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem; /* space between projects */
-  color: white;
-}
-
-.projects h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #444;
-  padding-bottom: 0.5rem;
-}
-
-.project {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.project h3 {
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-.project p {
-  font-size: 0.95rem;
-  color: #ccc;
-  margin: 0;
-}
-
-.project ul {
-  padding-left: 1.2rem;
-  margin: 0;
-}
-
-.project li {
-  margin-bottom: 0.4rem;
-}
-
- .projects {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.project {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.project-img {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 6px;
-  border: 1px solid #444;
-}
-
-.contact
-{
-    
-   color: white;
-   margin-left: 20px;
-   padding: 20px;
-   font-size: 14px;
- 
-}
-
-footer
-{
-    color: white;
-    text-align: center;
-    margin: 20px 0;
-}
-
- a
-{
-    text-decoration: none;
-    color: white;
-}
-
-.container {
-  display: flex;
-  min-height: 100vh;
-  color: white;
-}
-
-.sidebar {
-  width: 280px;
-  background-color: #000;
-  margin-left: 2rem;
-  
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.sidebar h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.sidebar .title {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #aaa;
-}
-
-.sidebar .contact p {
-  margin: 0.5rem 0;
-  
-}
-
-.sidebar a {
-  color: white;
     text-decoration: none;
 }
 
-.sidebar a:hover {
-  color: #91979b;
-}
-
-.about {
-  flex: 1;
-  padding: 3rem;
-}
-
-.about h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  float: right;
-  margin: 0 0 1rem 1rem;
-}
-
-.cv-content {
-  flex: 1;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.cv-content h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #444;
-  padding-bottom: 0.5rem;
-}
-
-.job, .edu-entry {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.job-header, .edu-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.job-header h3, .edu-header h3 {
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-.job-header span, .edu-header span {
-  font-size: 0.9rem;
-  color: #aaa;
-}
-
-ul {
-  margin: 0;
-  padding-left: 1.2rem;
-}
-
-ul li {
-  margin-bottom: 0.4rem;
-}
-.profile h2 a:hover,
-.sidebar h2 a:hover {
+a:hover {
     color: #91979b;
 }
 
+hr {
+    border: none;
+    border-top: 1px solid rgba(180,180,180,0.2);
+    margin: 0 20px;
+}
 
+/* ===== HEADER / NAVBAR ===== */
+header {
+    display: flex;
+    justify-content: space-between; /* profile/logo left, nav right */
+    align-items: center;
+    padding: 15px 20px;
+}
 
-@media screen and (max-width: 1024px)
-{
+header .profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
-    body 
-    {
-       padding: 0 20px;
-    }
-    header 
-    {
-    flex-direction: column;
-    align-items: flex-start;
-    }
+header .profile h2 {
+    margin: 0;
+    font-size: 24px;
+}
 
-    nav li 
-    {
+header #function {
+    color: #999;
+    font-size: 16px;
+}
+
+/* Logo image */
+.nav-logo {
+    width: 60px;  
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+/* NAV LINKS */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav li a.active {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 2px;
+}
+
+/* ===== HERO / MAIN SECTION ===== */
+.main-section {
+    text-align: center;
+    padding: 80px 20px 60px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #bbbbbb;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #222;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+/* ===== FEATURED PROJECTS ===== */
+.featured-projects {
+    text-align: center;  
+    padding: 60px 20px;
+}
+
+.featured-projects h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.featured-text {
+    font-size: 1rem;
+    color: #bbbbbb;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+/* ===== PROJECTS PAGE ===== */
+.projects-fullwidth {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.project {
+    margin-bottom: 2.5rem;
+}
+
+.project h3 {
+    margin-bottom: 0.5rem;
+}
+
+.project p {
+    color: #ccc;
+}
+
+.project-img {
+    width: 100%;
+    max-width: 500px; 
+    border-radius: 6px;
+    border: 1px solid #444;
+    margin-top: 0.5rem;
+}
+
+/* ===== CV PAGE ===== */
+.cv-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.cv-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.job, .edu-entry {
+    margin-bottom: 2rem;
+}
+
+.job-header, .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.job-header span, .edu-header span {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+
+ul li {
+    margin-bottom: 0.4rem;
+}
+
+/* ===== ABOUT PAGE ===== */
+.about-fullwidth {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.about-fullwidth h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-fullwidth p {
+    margin-bottom: 1.2rem;
+    color: #bbbbbb;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #999;
+    border-top: 1px solid rgba(180,180,180,0.2);
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media screen and (max-width: 1024px) {
+    /* Keep navbar horizontal, no stacking */
+    header {
         flex-direction: row;
-
-    }
-    .main-section,
-    .section 
-    {
-        flex-direction: column;
-        margin-left: 20px; /* reduces left margin for smaller screens */
+        justify-content: space-between;
         align-items: center;
     }
-    .content
-    {
-        margin: 20px 0; /* adds vertical spacing between sections to be more readable on smaller screens*/
-    }
-     .profile
-     {
-         align-items: center;
-        text-align: center;
-        margin: 0 auto; /* centers the profile section */
-     }
-    .nav-logo
-    {
-        margin-top: 10px;
-        margin: 0 auto; /* centers the logo */
+}
 
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
     }
-    .vertical-line
-    {
-        display: none; /* hides vertical line on smaller screens */
 
+    .btn {
+        padding: 0.6rem 1.2rem;
     }
 }
 
-    @media screen and (max-width: 768px) 
-    {
-    body {
-        padding: 0 15px;
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.7rem;
     }
 
-    .scroll-box {
-        margin: 0 auto; /* centers scroll box */
+    .featured-projects h2 {
+        font-size: 1.5rem;
     }
 
-    .contact-item {
-        margin-bottom: 10px; /* adds spacing between contact lines */
-    }
-
-    .vertical-line {
-        display: none; /* hides vertical line on small screens */
+    .featured-text {
+        font-size: 0.95rem;
     }
 }
-
- @media screen and (max-width: 375px) 
-    {
-    body {
-        padding: 0 15px;
-    }
-
-    .scroll-box {
-        margin: 0 auto; /* centers scroll box */
-    }
-
-    .contact-item {
-        margin-bottom: 10px; /* adds spacing between contact lines */
-    }
-
-    .vertical-line {
-        display: none; /* hides vertical line on small screens */
-    }
-}
-    
- 
-
-
-
