@@ -212,36 +212,146 @@ footer {
     border-top: 1px solid rgba(180,180,180,0.2);
 }
 
-/* ===== MEDIA QUERIES ===== */
-@media screen and (max-width: 1024px) {
-    /* Keep navbar horizontal, no stacking */
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
 
-@media screen and (max-width: 768px) {
+/* ===== 1024px ===== */
+@media screen and (max-width: 1024px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .main-section {
+        padding: 60px 15px 40px;
+    }
+
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
     }
 
     .btn {
         padding: 0.6rem 1.2rem;
+        font-size: 1rem;
     }
 }
 
-@media screen and (max-width: 480px) {
+/* ===== 768px (tablets) ===== */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .main-section {
+        padding: 50px 15px 30px;
+    }
+
     .hero-content h1 {
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
 
-    .featured-projects h2 {
-        font-size: 1.5rem;
-    }
-
-    .featured-text {
+    .hero-content p {
         font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .projects-fullwidth,
+    .cv-content,
+    .about-fullwidth {
+        padding: 20px 15px;
+        margin: 30px auto;
+    }
+
+    .project h3,
+    .job-header h3,
+    .edu-header h3,
+    .about-fullwidth h1,
+    .about-fullwidth h2 {
+        font-size: 1.4rem;
+    }
+
+    .project p,
+    .job p,
+    .edu-entry p,
+    .project ul li,
+    .job ul li,
+    .edu-entry ul li,
+    .about-fullwidth p {
+        font-size: 0.95rem;
+    }
+
+    .project-img {
+        max-width: 100%;
+    }
+
+    .job-header, .edu-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+
+/* ===== 375px (small phones) ===== */
+@media screen and (max-width: 375px) {
+    .main-section {
+        padding: 40px 10px 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 0.45rem 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .projects-fullwidth,
+    .cv-content,
+    .about-fullwidth {
+        padding: 15px 10px;
+        margin: 20px auto;
+    }
+
+    .project h3,
+    .job-header h3,
+    .edu-header h3,
+    .about-fullwidth h1,
+    .about-fullwidth h2 {
+        font-size: 1.2rem;
+    }
+
+    .project p,
+    .job p,
+    .edu-entry p,
+    .project ul li,
+    .job ul li,
+    .edu-entry ul li,
+    .about-fullwidth p {
+        font-size: 0.9rem;
     }
 }
